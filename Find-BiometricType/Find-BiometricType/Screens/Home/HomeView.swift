@@ -17,8 +17,7 @@ struct HomeView: View {
         VStack(spacing: 20) {
             if biometricType == .faceID {
                 Button(action: {
-                    // Action when Face ID icon is tapped
-                    message = "Face ID tapped!"
+                    authenticateUser() // Authenticate on Face ID tap
                 }) {
                     Image(systemName: "faceid")
                         .resizable()
@@ -27,8 +26,7 @@ struct HomeView: View {
                 }
             } else if biometricType == .touchID {
                 Button(action: {
-                    // Action when Touch ID icon is tapped
-                    message = "Touch ID tapped!"
+                    authenticateUser() // Authenticate on Touch ID tap
                 }) {
                     Image(systemName: "touchid")
                         .resizable()
@@ -39,7 +37,7 @@ struct HomeView: View {
                 Text("Biometrics not available")
             }
             
-            // Display a message when an icon is tapped
+            // Display a message with authentication results
             if !message.isEmpty {
                 Text(message)
                     .foregroundColor(.blue)
@@ -65,6 +63,23 @@ struct HomeView: View {
             }
         }
         return .none
+    }
+    
+    // Biometric Authentication function
+    func authenticateUser() {
+        let context = LAContext()
+        let reason = "Authenticate to access this feature"
+        
+        // Check if the device supports biometric authentication
+        context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
+            DispatchQueue.main.async {
+                if success {
+                    message = "Authentication successful!"
+                } else {
+                    message = "Authentication failed: \(authenticationError?.localizedDescription ?? "Unknown error")"
+                }
+            }
+        }
     }
 }
 
