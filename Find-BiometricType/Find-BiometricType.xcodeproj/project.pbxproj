@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		7A8C8E982C9460B3002F417C /* Find_BiometricTypeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8C8E972C9460B3002F417C /* Find_BiometricTypeApp.swift */; };
-		7A8C8E9A2C9460B3002F417C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8C8E992C9460B3002F417C /* ContentView.swift */; };
 		7A8C8E9C2C9460B8002F417C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8C8E9B2C9460B8002F417C /* Assets.xcassets */; };
 		7A8C8E9F2C9460B8002F417C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8C8E9E2C9460B8002F417C /* Preview Assets.xcassets */; };
+		7A8C8EA72C948C52002F417C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8C8EA62C948C52002F417C /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7A8C8E942C9460B3002F417C /* Find-BiometricType.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Find-BiometricType.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8C8E972C9460B3002F417C /* Find_BiometricTypeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Find_BiometricTypeApp.swift; sourceTree = "<group>"; };
-		7A8C8E992C9460B3002F417C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7A8C8E9B2C9460B8002F417C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A8C8E9E2C9460B8002F417C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7A8C8EA62C948C52002F417C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +51,8 @@
 		7A8C8E962C9460B3002F417C /* Find-BiometricType */ = {
 			isa = PBXGroup;
 			children = (
-				7A8C8E972C9460B3002F417C /* Find_BiometricTypeApp.swift */,
-				7A8C8E992C9460B3002F417C /* ContentView.swift */,
+				7A8C8EA82C948C6E002F417C /* Iniitals */,
+				7A8C8EA52C948C2E002F417C /* Screens */,
 				7A8C8E9B2C9460B8002F417C /* Assets.xcassets */,
 				7A8C8E9D2C9460B8002F417C /* Preview Content */,
 			);
@@ -65,6 +65,54 @@
 				7A8C8E9E2C9460B8002F417C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7A8C8EA52C948C2E002F417C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				7A8C8EA92C948C8E002F417C /* Home */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		7A8C8EA82C948C6E002F417C /* Iniitals */ = {
+			isa = PBXGroup;
+			children = (
+				7A8C8E972C9460B3002F417C /* Find_BiometricTypeApp.swift */,
+			);
+			path = Iniitals;
+			sourceTree = "<group>";
+		};
+		7A8C8EA92C948C8E002F417C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7A8C8EA62C948C52002F417C /* HomeView.swift */,
+				7A8C8EAC2C948CB8002F417C /* HomeView */,
+				7A8C8EAB2C948CA9002F417C /* HomeModel */,
+				7A8C8EAA2C948C9C002F417C /* HomeViewModel */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7A8C8EAA2C948C9C002F417C /* HomeViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeViewModel;
+			sourceTree = "<group>";
+		};
+		7A8C8EAB2C948CA9002F417C /* HomeModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeModel;
+			sourceTree = "<group>";
+		};
+		7A8C8EAC2C948CB8002F417C /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +185,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A8C8E9A2C9460B3002F417C /* ContentView.swift in Sources */,
 				7A8C8E982C9460B3002F417C /* Find_BiometricTypeApp.swift in Sources */,
+				7A8C8EA72C948C52002F417C /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +245,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +302,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
