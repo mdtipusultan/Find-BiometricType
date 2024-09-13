@@ -11,21 +11,38 @@ import LocalAuthentication
 struct HomeView: View {
     
     @State private var biometricType: BiometricType = .none
+    @State private var message: String = ""
     
     var body: some View {
-        VStack {
+        VStack(spacing: 20) {
             if biometricType == .faceID {
-                Image(systemName: "faceid")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 100, height: 100)
+                Button(action: {
+                    // Action when Face ID icon is tapped
+                    message = "Face ID tapped!"
+                }) {
+                    Image(systemName: "faceid")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100, height: 100)
+                }
             } else if biometricType == .touchID {
-                Image(systemName: "touchid")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 100, height: 100)
+                Button(action: {
+                    // Action when Touch ID icon is tapped
+                    message = "Touch ID tapped!"
+                }) {
+                    Image(systemName: "touchid")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100, height: 100)
+                }
             } else {
                 Text("Biometrics not available")
+            }
+            
+            // Display a message when an icon is tapped
+            if !message.isEmpty {
+                Text(message)
+                    .foregroundColor(.blue)
             }
         }
         .onAppear {
